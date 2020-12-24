@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <Script>
+        function further() {
+            if (checkValidation() == 3) {
+                history.forward()
+                open("https://www.google.com")
+            }
+        }
+
+        // History Object use for Forward and Next to the Previous Page from the web
+        // Aso History Obejct Store the List of URL Location of Previous and Next
+
+        function checkValidation() {
+            var status = 2;
+            var lname = document.getElementById("lname").value;
+            var fname = document.getElementById("fname").value;
+
+            if (lname == "" && fname == "") {
+                document.getElementById("lmsg").innerHTML = "required";
+                document.getElementById("fmsg").innerHTML = "required";
+                status = 2
+            } else if (fname == "") {
+                document.getElementById("fmsg").innerHTML = "required";
+                document.getElementById("lmsg").innerHTML = "";
+                status = 2
+            } else if (lname == "") {
+                document.getElementById("lmsg").innerHTML = "required";
+                document.getElementById("fmsg").innerHTML = "";
+                status = 2
+            } else {
+                document.getElementById("lmsg").innerHTML = "";
+                document.getElementById("fmsg").innerHTML = "";
+                status = 3
+            }
+
+            return status;
+        }
+
+        function previous() {
+            history.back();
+        }
+
+    </Script>
+
+</head>
+
+<body>
+    FirstName : <input type="text" id="fname" required onchange="checkValidation()" />
+    <br>
+    <div id="fmsg" style="color:red;padding-left: 80px;"></div>
+    <br>
+    LastName : <input type="text" id="lname" required onchange="checkValidation()" />
+    <br>
+    <div id="lmsg" style="color:red;padding-left: 80px;"></div>
+    <br>
+    <input type="button" value="Login" onclick="further()" />
+    <input type="button" value="previous" onclick="previous()" />
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- 
+    here, Explain only Complicated function flow
+ -->
+
+<html>
+
+<head>
+    <title>
+        JS-Functions
+    </title>
+</head>
+
+<script>
+    var useInFun = 12;
+    function function1() {
+        return useInFun * 12;
+    }
+    document.write(function1) // Withour '()' it return function Object
+
+    var objectWithFunction = {
+        fName: "Win",
+        lName: "dows",
+        fullName: function wholeName() {
+            return this.fName + this.lName;
+        }
+    }
+    // Access Object Member using '.' or using [""]
+    document.write("<br>" + objectWithFunction.fullName())
+
+    function objects() {
+        // Below Object is Very Use full when Declare Specific Type of Object 
+        // but all are Complicated and Slow Down your Execution Speed
+        var string = new String();
+        var num = new Number();
+        var bool = new Boolean();
+    }
+
+</script>
+
+<body>
+</body>
+
+</html>

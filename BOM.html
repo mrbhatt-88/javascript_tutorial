@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>
+        BOM
+    </title>
+</head>
+
+<body>
+    <script>
+
+        function justASecond() {       // Set TimeOut
+            alert('Please Come Here')
+        }
+        
+        var second = setInterval(inteval, 1000);
+
+        function inteval() {    // digital clock
+            var currentDate = new Date();
+            document.getElementById('fff').innerHTML = currentDate;
+
+
+        }
+
+
+
+        function deleteRecord(fullName) {
+
+            window.setTimeout(20000)
+            window.prompt('enter Yur name : ', fullName)
+            window.alert('Your record is Deleted')
+
+            if (confirm('are you sure ?') == true) {
+
+                location.replace('https://mail.google.com/mail/u/1/#inbox/FMfcgxwHMsVFrxHwcBFztLDhrnXmWpsw')
+
+            } else {
+                open('https://www.google.com')
+                close('https://www.google.com')
+                // location.replace('http://localhost:5500/Browser%20Object%20Model.html')
+                // in java Script REdirect to One page to Other page By Using the LOCATION.REPLACE and WINDOW.OPEN
+            }
+        }
+    </script>
+    <p id="p"></p>
+    <input type="button" onclick="deleteRecord('darshan')" value="DeleteRecord" />
+    </form>
+
+    <br><br><br>
+
+    <button onclick="setTimeout(justASecond,5000)">wait</button>
+    <br><br><br>
+    <p id="fff"></p>
+</body>
+
+</html>

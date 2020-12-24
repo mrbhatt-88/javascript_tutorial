@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <script>
+        // Here Use the JavaScript with Regular Expression... and Its mode is Below
+        // g : global Search
+        // i : case Sensitive Search
+        // m : multiLine Search
+        function checkRegex() {
+            var pattern = /[a-z+]/g;
+            var input = new String(document.getElementById("f").elements[0].value);
+            var r = input.match(pattern)
+            document.getElementById('demo').innerHTML = r
+        }
+    </script>
+
+    <form id="f">
+        <input type="text" name="name" />
+        <input type="button" onclick="checkRegex()" value="Regex_Checking" />
+    </form>
+    <p id="demo"></p>
+</body>
+
+</html>

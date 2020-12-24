@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <title>
+        JS-Object
+    </title>
+</head>
+
+<body>
+    <script>
+
+        // Object In JavaScript
+
+        document.write('Java Script Object <br>')
+        switch ('object' || 'object1' || 'object2' || 'object3' || ' ') {
+
+            case 'object':        // By using New Keyword
+                var obj = new Object();
+                obj.name = 'darshan'
+                obj.id = '3'
+                document.write("name = " + obj.name + "<br>")
+                document.write("id =" + obj.id + '<br><br>')
+
+
+            case 'object1':      // By usinf Object Literals
+                emp = { name: 'dev', id: '23' }
+                document.write('name = ' + emp.name)
+                document.write('<br> id = ' + emp.id + "<br><br>")
+
+            case 'object2':     // By using Constuctor
+                function student(name, id) {
+                    this.name = name;
+                    this.id = id;
+                }
+                stud = new student('bhatt', 12);
+                document.write("name = " + stud.name + '<br>')
+                document.write("id = " + stud.id + '<br><br>')
+
+            case "object3":   // Object with In the Object
+                function subject(subName, subCode) {
+                    this.subName = subName;
+                    this.subCode = subCode;
+                    this.changeSubject = changeSubject;
+                    function changeSubject(change) {
+                        this.subName = change;
+                    }
+                }
+                subObj = new subject('Maths', 123);
+                document.write("subject name = " + subObj.subName + '<br>')
+                document.write("Subject Code = " + subObj.subCode + '<br>')
+                subObj.changeSubject('Science')
+                document.write('change Subject = ' + subObj.subName + '<br><br>')
+
+            default:
+                document.write('No any Case <br><br><br>');
+        }
+        document.write("   Object Array : <br><br>")
+        switch ('1' || '2' || '3' || '4') {
+
+            case '1': // Using Array Literals.
+                var book = ['b1', 'b2', 'b3']
+                for (var i = 0; i < book.length; i++) {
+                    document.write("book = " + book[i] + '<br>')
+
+                }
+                document.write('<br>')
+            case '2':    // Array Directly New KeyWord
+                var books = new Array();
+                for (var j = 0; j < 3; j++) {
+                    books[j] = 'Books_Of_' + j;
+                    document.write('Books = ' + books[j] + '<br>')
+                }
+                document.write('<br>')
+
+            case '3':    // Array Contructor
+                var emp = new Array("Jai", "Vijay", "Smith");
+                for (i = 0; i < emp.length; i++) {
+                    document.write("employee = " + emp[i] + "<br>");
+                }
+                document.write('<br><br>')
+        }
+        // Here Perform the String Object 
+        document.write('Now Perform the String Object in javaScript....<br>')
+        var string = "Focal Training Center in junagadh";
+        document.write("LowerCase = " + string.toLocaleLowerCase() + '<br><br><br>')
+
+        // Here perform The Date Object In JavaScript....
+        document.write('Now perform The Date Object In JavaScript....<br>')
+        var date = new Date();
+        document.write("Current Date = " + date + '<br><br>');
+
+        // Here Perform the Math Object in JavaScript....
+        document.write('Now perform The Math Object In JavaScript....<br>')
+        var int = 100;
+        document.write(Math.PI + "<br>")
+        var f = Math.max(1, 2, 3, 4, 5, 6, 7, 8, 9)
+        document.write("Maximum= " + f);
+
+        // Here Number Object in JavaScript
+        document.write('Now perform the Number Object in JavaScript....<br>')
+            var dd = 10.0;
+            
+            document.write(Number.isSafeInteger(dd) + "<br>")
+            document.write(Number.isFinite(dd))
+            
+        
+
+    </script>
+</body>
+
+</html>

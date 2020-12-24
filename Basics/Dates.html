@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>
+        Dates...
+    </title>
+
+    <script>
+
+        function javaScriptDates() {
+
+            // Sun Dec 20 2020 21:55:10 GMT+0530 (India Standard Time)
+            document.writeln("Date : " + new Date())
+
+            // Sun Dec 20 2020
+            document.writeln("<br>" + new Date().toDateString())
+
+            // 12/20/2020
+            document.writeln("<br>" + new Date().toLocaleDateString())
+
+            // Sun, 20 Dec 2020 16:27:07 GMT
+            document.writeln("<br>" + new Date().toUTCString())
+
+            // In Date Constructor Maximum 2 Value is Compuslory for Specifing Date otherwise is act as MiliSeconds
+            document.writeln("<br>" + new Date())
+
+            // 2020-12-20T16:33:56.608Z
+            document.writeln("<br>" + new Date().toISOString())
+
+            // 22:04:47 GMT+0530 (India Standard Time)
+            document.writeln("<br>" + new Date().toTimeString())
+        }
+
+        function dateMethods() {
+
+            // Return Date
+            document.write("<br>" + new Date().getDate())
+
+            // Return Full Year like 1999,2020,2021 
+            document.write("<br>" + new Date().getFullYear())
+
+            // All method are available like getMinute, getHour , getTime etc
+
+            // This Available in ECMAScript 5.
+            document.write("<br>" + Date().now())
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="javaScriptDates()">javaScriptDates</button>
+    <button onclick="dateMethods()">dateMethods</button>
+</body>
+
+</html>

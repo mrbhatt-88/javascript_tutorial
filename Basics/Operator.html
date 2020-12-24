@@ -1,0 +1,52 @@
+<html>
+<!-- 
+    Here Explain Only Complicated Operator
+ -->
+
+<head>
+    <title>
+        JS-Operator
+    </title>
+    <script>
+        function operator() {
+            var string = "2";
+            var type = 2;
+            if (string === type) {
+                document.write("Same")
+            } else {
+                document.write("not same")
+            }
+        }
+
+        function type_Of() {
+            var name = "JavScript";
+            document.write("Typeof String : " + typeof (name))
+        }
+
+        function checkTypeDynamic() {
+            var i = new Object(); // I Act as Object
+            console.log(typeof (i))
+            var i = "10"; // I Act as String
+            document.write(typeof (i))
+        }
+
+        function javaScriptObject() {
+            var student = {
+                name: "Java",
+                version: "ES6"
+            };
+            document.write(student.name + "Script version " + student.version)
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button value="Click" onclick="operator()">operator</button>
+    <button value="Click" onclick="checkTypeDynamic()">checkTypeDynamic</button>
+    <button value="Click" onclick="type_Of()">typeOf</button>
+    <button value="Click" onclick="javaScriptObject()">javaScriptObject</button>
+</body>
+
+</html>

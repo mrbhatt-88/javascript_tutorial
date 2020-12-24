@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+
+    <script>
+
+        class DemoClass {
+
+            // Constructor
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                
+                document.write(this.firstName + " " + this.lastName + "<br>");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+
+        FirstName : <input type="text" id="fname" />
+        <br><br>
+        LastName : <input type="text" id="lname" />
+        <br><br>
+        <input type="submit" value="LogIn"
+            onclick="new DemoClass(document.getElementById('fname').value, document.getElementById('lname').value)" />
+    </form>
+
+</body>
+
+</html>

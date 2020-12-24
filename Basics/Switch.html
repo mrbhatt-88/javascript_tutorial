@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>
+        Switch statment
+    </title>
+</head>
+
+<body>
+    <script>
+        function switchWithForDemoWithFunction() {
+            var whileVar = 0;
+            switch ('do-while') {
+                case 'for':
+                    for (var i = 0; i < 29; i++) {
+                        document.write("for = " + i + "<br>");
+                    }
+                    break;
+                case 'while':
+                    while (whileVar < 12) {
+                        document.write('while =' + whileVar + '<br>')
+                        whileVar++;
+                    }
+                    break;
+                case 'do-while':
+                    do {
+                        whileVar++;  // At least One Time Execution
+                        document.write('do-While =' + whileVar + "<br>")
+                    } while (whileVar < 12);
+                    break;
+                default:
+                    document.write('none')
+                    break;
+            }
+        }
+    </script>
+    <input type="button" onclick="switchWithForDemoWithFunction()" value="Call Finction" />
+</body>
+
+</html>

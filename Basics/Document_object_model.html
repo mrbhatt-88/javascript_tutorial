@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Document Object Model...
+    </title>
+    <script>
+        function documentIdWithoutMethod() {
+            alert("Your Inseted Data : " + document.dataForm.data.value)
+        }
+
+        function getElementByIdThrough() {
+            alert("Your Data Using getElementById : " + document.getElementById("data1").value)
+        }
+
+        function getElementByNameThrough() {
+            alert("Your Data Using getElementByName : " + document.getElementsByName("data2").length)
+        }
+
+        function getElementByTagName() {
+            alert("Total Paragraph in yout Html File : " + document.getElementsByTagName("p").length)
+        }
+
+        function showSignUp() {
+
+            var data = "<br><br>Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea> <br><input type='submit' value='Post Comment'>";
+            document.getElementById('mylocation').innerHTML = data;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form name="dataForm">
+                    <input type="text" name="data" />
+                    <input type="submit" value="Insert Value" onclick="documentIdWithoutMethod()" />
+                </form>
+            </td>
+            <td>
+                <form>
+                    <input type="text" id="data1" />
+                    <input type="button" onclick="getElementByIdThrough()" value="getElementById" />
+                </form>
+            </td>
+            <td>
+                <form>
+                    Male : <input type="radio" name="data2" />
+                    Female : <input type="radio" name="data2" />
+                    Other : <input type="radio" name="data2" />
+                    <input type="button" onclick="getElementByNameThrough()" value="getElementByNameThrough" />
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <p>This Is Paragraph</p>
+    <input type="button" onclick="getElementByTagName()" value="getElementByTagName" />
+    <br><br>
+
+    <form>
+        <input type="button" value="SignUp" onclick="showSignUp()" />
+        <div id="mylocation"></div>
+    </form>
+</body>
+
+</html>

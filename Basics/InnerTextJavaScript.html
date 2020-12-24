@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript InnerText</title>
+
+    <script>
+        function validate() {
+            var email = new String(document.emailValidate.email.value)
+            if (email.includes("@")) {
+                document.getElementById("write").innerText = "";
+            }
+            else {
+                document.getElementById("write").innerText = "Enter Valid Email."
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="emailValidate">
+        Check EMail : <input type="text" onkeyup="validate()" name="email" />
+    </form>
+    <p id="write"></p>
+</body>
+
+</html>

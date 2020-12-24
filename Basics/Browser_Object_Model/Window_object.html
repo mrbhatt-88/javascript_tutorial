@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>
+        Browser Object Model.
+    </title>
+    <script>
+
+        // Add some Alert
+        function BOM() {
+            // Window is Object of Browser not a JavaScript Object
+            window.alert("Stop")
+        }
+
+        // Exmple for Varification  YES/NO
+        function confirmBOM() {
+            if (confirm("Are you sure to delete this item...")) {
+                alert("Item deleted...")
+            } else {
+                alert("Item not deleted...")
+            }
+        }
+
+        // Varification of any detail
+        function promptBOM() {
+            document.write("Your OTP is : " + prompt("Enter OTP for confirmation... "))
+        }
+
+        // pen any other Resource from our Application
+        function openBOM() {
+            open("https://www.google.com")
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="BOM()">alert</button>
+    <button onclick="confirmBOM()">confirm</button>
+    <button onclick="promptBOM()">promptBOM</button>
+    <button onclick="openBOM()">openBOM</button>
+</body>
+
+</html>

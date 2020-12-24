@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>
+        Numbers in JavaScript
+    </title>
+    <script>
+        function checkNan() {
+            var i = "100" / 100;
+            document.writeln("Varibles is : " + isNaN(i))
+            document.writeln("<br>Type of isNaN : " + typeof (NaN))
+        }
+        function checkInfinity() {
+            var i = 10 / 0;
+            document.write("Check Infinity : " + i)
+            document.writeln("<br>Type of infiniy : " + typeof (Infinity))
+        }
+        function numberMethods() {
+            document.write("Exponetial : " + 9.96777.toExponential(4))
+            // It Consider the Decimal point
+            document.write("<br>Fixed  : " + 9.555.toFixed(8)) // 9.55500000
+            document.write("<br>Positive infinity : " + Number.POSITIVE_INFINITY)
+            document.write("<br>Min Number Value : " + Number.MIN_VALUE)
+            document.write("<br>Max Number Value : " + Number.MAX_VALUE)
+
+            // Number Properties is Java Script Wrapper it can't use with JavaScript Varibles...
+        
+        }
+    </script>
+
+    <button onclick="checkNan()">IsNan</button>
+    <button onclick="checkInfinity()">checkInfinity</button>
+    <button onclick="numberMethods()">numberMethods</button>
+</head>
+
+</html>

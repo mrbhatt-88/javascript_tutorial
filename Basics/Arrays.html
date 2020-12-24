@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>
+        Arrays
+    </title>
+    <script>
+
+        function javaScriptArray() {
+            var arr = ["car", "bike", "truck", "bus", "train"]
+
+            // Join and toString are Actual Same but Seperation is Diffrient
+            document.writeln("ToString : " + arr.toString())
+            document.writeln("<br>Join : " + arr.join(" * "))
+
+            // Push Element At the End
+            document.writeln("<br>Push : " + arr.push("Laptop") + " -- Final Array : " + arr)
+
+            // Pop Element from the End
+            document.writeln("<br>Pop : " + arr.pop("Laptop") + " -- Final Array : " + arr)
+
+            // Identify the Array
+            document.writeln("<br>IsArray : " + Array.isArray(arr))
+
+            // Remove First Element, Decrease the Index of Other Elements
+            document.writeln("<br>Shift : " + arr.shift() + " -- Final Array : " + arr)
+
+            // UnShift Return New Array Length and All Element are Unshifted
+            document.writeln("<br>UnShift : " + arr.unshift("Mouse") + " -- Final Array : " + arr)
+
+            // Compare Function
+            var intArray = [300, 12, 234, 500, 1, 2]
+            document.writeln("<br>Sort using Compare : " + intArray.sort(function (a, b) { return a - b }))
+
+            // Now we are find Highest and Lowest Element from the Array
+            var maxArray = intArray.sort(function (a, b) { return a - b });
+            document.writeln("<br>Max Find using Compare Function: " + maxArray[maxArray.length - 1])
+            document.writeln("<br>Min Find using Compare Function: " + maxArray[0])
+
+            // now find the Min and Max Using Math Library
+            document.writeln("<br>Min find using Math : " + Math.min.apply(null, intArray))
+            document.writeln("<br>Max find using Math : " + Math.max.apply(null, intArray))
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="javaScriptArray()">javaScriptArray</button>
+</body>
+
+</html>

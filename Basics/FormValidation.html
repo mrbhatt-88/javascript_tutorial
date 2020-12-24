@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autheticate</title>
+
+    <style>
+        body {
+            background-image: url("images/123.jpg");
+        }
+
+        .animate {
+            position: relative;
+            animation: imageFrame 1s linear alternate;
+        }
+
+        img:hover {
+            opacity: 0.5;
+        }
+
+        @keyframes imageFrame {
+            0% {
+                top: 200px;
+            }
+
+            50% {
+                bottom: 1000px;
+            }
+
+            75% {
+                top: 0px;
+            }
+
+
+            /* 25% {
+                left: 170mm;
+                top: 10px;
+            }
+
+            50% {
+                left: 200mm;
+                top: 10px;
+            }
+
+            75% {
+                left: 170mm;
+                top: 200px;
+            }
+
+            100% {
+                left: 140mm;
+                top: 10px;
+            } */
+        }
+    </style>
+
+    <script>
+
+        function auth() {
+            var userId = document.getElementById("userId").value;
+            var pass = document.getElementById("pass").value;
+            if (userId == null || userId == "") {
+                alert("UserId or passord are required...")
+            }
+            if (userId == "darshan" && pass == "darshan") {
+                confirm("Are you sure to login...")
+            } else {
+                alert("Invalid credential...")
+            }
+        }
+
+        function refreash() {
+            location.reload();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="animate">
+        <img src="images/Bird.png" width="70px" height="70px" onclick="refreash()"
+            style="margin: auto;padding-left: 170mm;padding-top: 90px;">
+    </div>
+    <div>
+        <label style="margin: auto;padding-left: 157mm;padding-top: 50mm;">Welcome to Phinolex Portal</label>
+    </div>
+    <div style=" margin: auto;padding-left: 139mm;padding-top: 10mm;">
+        <form onsubmit="" method="POST">
+            <label style="padding-left: 150;">UserId : </label>&nbsp;&nbsp;&nbsp;
+            <input style="border-style: dashed;border-width: 3px; border-color: lightcoral;" type="text" name="userId"
+                id="userId" />
+            <br><br>
+            Password : <input
+                style="border-style: dashed;border-width: 3px;border-radius: 5px; border-color: lightcoral"
+                type="password" name="pass" id="pass" />
+            <br><br>
+    </div>
+    <div style="padding-left: 172mm;">
+        <input type="submit" value="Login" onclick="auth()" style="" />
+    </div>
+    </form>
+
+</body>
+
+</html>
